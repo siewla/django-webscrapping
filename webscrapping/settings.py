@@ -33,7 +33,9 @@ ALLOWED_HOSTS = ['django-webscrapping.herokuapp.com', '127.0.0.1']
 
 INSTALLED_APPS = [
     # local apps installed
+    "app",
     "jobsdb",
+    "coldstorage",
     # end of local apps installed
     'django.contrib.admin',
     'django.contrib.auth',
