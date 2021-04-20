@@ -1,1 +1,1 @@
-web: gunicorn webscrapping.wsgi --log-file -
+web: gunicorn webscrapping.wsgi
