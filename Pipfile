@@ -8,6 +8,8 @@ django = "*"
 requests = "*"
 beautifulsoup4 = "*"
 gunicorn = "*"
+dj-database-url = "*"
+whitenoise = "*"
 
 [dev-packages]
 
