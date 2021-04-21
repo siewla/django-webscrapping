@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,10 +12,10 @@
       integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href={% static 'jobsdb/main.css' %} />
   </head>
   <body>
-    <h1>Top</h1>
+    <h1>JobsDB</h1>
     {% block body %} {% endblock body %}
-    <h1>Bottom</h1>
   </body>
 </html>
