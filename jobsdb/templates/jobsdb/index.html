@@ -1,12 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jobsdb</title>
-</head>
-<body>
-    <h1>Jobsdb</h1>
-</body>
-</html>
+{% extends 'jobsdb/layout.html' %} {% block body %}
+<div class="container">
+  <div>
+    <form method="POST">
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-md-12">
+          <input
+            type="text"
+            placeholder="search for jobs here"
+            class="form-control"
+            name="search"
+          />
+        </div>
+        <div class="col-md-12 mt-1">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="row">
+    {% for job in jobs %}
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h3>{{job.title}}</h3>
+          <h4>{{job.company_name}}</h4>
+          <a href="{{job.link}}">View Job</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock body %}
