@@ -41,5 +41,6 @@
    ```
 
 More details please refer to https://devcenter.heroku.com/articles/django-app-configuration
+https://devcenter.heroku.com/articles/django-assets
 
 or google-fu
