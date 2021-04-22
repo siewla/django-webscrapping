@@ -16,13 +16,13 @@
 6. pipenv install gunicorn whitenoise
 
 7. go to settings.py
-   add your app url and localhost or allow all (_) to allowed hosts
-   ALLOWED_HOSTS = ['django-webscrapping.herokuapp.com', '127.0.0.1']
+   add your app url and localhost or allow all to allowed hosts
+   `ALLOWED_HOSTS = ['django-webscrapping.herokuapp.com', '127.0.0.1']`
    or
-   ALLOWED_HOSTS = ['_']
+   `ALLOWED_HOSTS = ['*']`
 
    add this to middleware
-   MIDDLEWARE = [ 'whitenoise.middleware.WhiteNoiseMiddleware']
+   `MIDDLEWARE = [ 'whitenoise.middleware.WhiteNoiseMiddleware']`
 
 8. import os
 
